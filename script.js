@@ -6,9 +6,11 @@
 
 // PROJECT PLAN:
 
-// STEP 1: Add two numbers
-// in progresss...
+// STEP 0: Build a bare bone minimum HTML & CSS to start with.
+// in progress...
 
+
+// STEP 1: Add two numbers
 
 // STEP 2: Subtract two numbers
 
