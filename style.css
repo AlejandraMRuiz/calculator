@@ -24,21 +24,20 @@ body    {
     font-size: calc(1rem * 1.2 *1.2);
 }
 
-.calculator-keys    {
-    /* why aren't button colors affected by parent div? */
+.calculator-keys button {
     background-color: purple;
     color: orange;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-template-areas: repeat
-    /* '. . . .'
+    '. . . .'
     'seven eight nine equal'
     'four five six equal'
     'one two three equal'
-    'zero decimal clear equal'; */
+    'zero decimal clear equal';
 }
 
-/* .one    {
+.one    {
     grid-area: one;
 }
 
@@ -89,4 +88,4 @@ body    {
 .equal    {
     grid-area: equal;
     color: orange;
-} */
+}
