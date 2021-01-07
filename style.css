@@ -100,6 +100,18 @@ body    {
 }
 
 
+.number {
+    background: lightgrey;    
+}
+
+
+.number:hover,
+.number:focus {
+    background: #10D0F0;
+    color: white;
+}
+
+
 .decimal    {
     grid-area: decimal;
 }
@@ -143,19 +155,3 @@ body    {
     color: white;
 }
 
-
-.number {
-    background: lightgrey;    
-}
-
-
-.number:hover,
-.number:focus {
-    background: #10D0F0;
-    color: white;
-}
-
-/* .operator:active,
-.number:active   {
-    background: grey;
-} */

@@ -1,4 +1,33 @@
 
+const keys = document.querySelector('.calculator-keys');
+// const calculatorDisplay = document.getElementById('calculator-display');
+
+
+keys.addEventListener('click', event => {
+    // console.log('eyyy!');
+    console.log(event.target);
+    // if (event.target.closest('button')) return
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7,10 +36,15 @@
 // PROJECT PLAN:
 
 // STEP 0: Build a bare bone minimum HTML & CSS to start with.
+// DONE!
+
+// STEP 1: Add two numbers
 // in progress...
 
 
-// STEP 1: Add two numbers
+// (a) get 6 to display on 'click' event.
+// loading...
+
 
 // STEP 2: Subtract two numbers
 
