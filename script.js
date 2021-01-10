@@ -1,18 +1,20 @@
 
 const keys = document.querySelector('.calculator-keys');
-let calculatorDisplay = document.getElementById('calculator-display');
+const display = document.querySelector('.calculator-display');
+
 
 
 keys.addEventListener('click', event => {
-    console.log(event.target);
-    calculatorDisplay.textContent = calculatorDisplay.value;
+    const key = event.target;
+    const keyValue = key.textContent;
+    const displayValue = display.textContent;
+    
+    if (displayValue === 0) {
+    display.textContent = keyValue;
+    } else {
+        display.textContent = displayValue + keyValue;
+    }
 });
-
-
-// Ahmed's guidance:
-
-// get the display input from html and set to a variable
-// set the button value/text content equal to the display variable
 
 
 

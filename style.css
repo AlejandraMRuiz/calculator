@@ -22,9 +22,8 @@ body    {
 }
 
 
-#calculator-display {
-    /* background-color: #4F4F56; */
-    background-color: cornflowerblue;
+.calculator-display {
+    background-color: #4F4F56;
     color: rgb(22, 201, 67);
     width: 16.25rem;
     padding: 0.05rem 1rem;
