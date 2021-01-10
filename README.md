@@ -4,7 +4,7 @@ Basic calculator in pure JavaScript, HTML & CSS.
 
 Try it [here!](https://alejandramruiz.github.io/calculator/)
 
-<image src ="AV/calc.png" width="750" height="435">
+<image src ="AV/calc.png" width="700" height="445">
 
 ## Summary
 Escribe tu resumen aquí.    
