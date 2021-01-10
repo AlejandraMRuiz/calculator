@@ -100,13 +100,13 @@ body    {
 }
 
 
-.number {
+[data-type='number'] {
     background: lightgrey;    
 }
 
 
-.number:hover,
-.number:focus {
+[data-type='number']:hover,
+[data-type='number']:focus {
     background: #10D0F0;
     color: white;
 }
@@ -144,14 +144,17 @@ body    {
 }
 
 
-.operator   {
+[data-type='operator']   {
     background: #9C9699;
 }
 
 
-.operator:hover,
-.operator:focus    {
+[data-type='operator']:hover,
+[data-type='operator']:focus    {
     background: #722EAB;
     color: white;
 }
 
+[data-state='selected'] {
+    background: green;
+}

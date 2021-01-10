@@ -16,6 +16,31 @@ keys.addEventListener('click', event => {
     } else {
         display.textContent = displayValue + keyValue;
     }
+
+    if (type === 'operator')    {
+        const operatorKeys = keys.querySelectorAll("[data-type='operator']")
+        operatorKeys.forEach(el => { el.dataset.state = '' })
+        // consider renaming 'el' to 'symbol' or similar. 
+
+        // ALTERNATIVE:
+        // const currentActiveOperator = calculator.querySelector('[data-state='selected']')
+        // if (currentActiveOperator)  {
+        //     currentActiveOperator.dataset.state = ''
+        // }
+
+        key.dataset.state = 'selected'
+
+    }
+
+
+    if (type === 'equal')   {
+        // perform a calculation
+        firstNumber + secondNumber
+
+
+        display.textContent = parseInt(displayValue)
+    }
+
 });
 
 
@@ -28,16 +53,20 @@ keys.addEventListener('click', event => {
 // *ADD*
 
 // TEST CASE
+
 // Description: Adding 1 + 2 = 3
 // 1.) Click on the number one button
 // EXPECTATION: Show 1 in the display
-// ACTUAL: ???
+// ACTUAL: Works.
+
 // 2.) Click on the plus button
-// EXPECTATION: Nothing. (Still showing 1 in the display)
-// ACTUAL: ???
+// EXPECTATION: Show + in the display. (Should display "1+")
+// ACTUAL: Works.
+
 // 3.) Click on the number two button
 // EXPECTATION: Show 2 in the display
-// ACTUAL: ???
+// ACTUAL: Works.
+
 // 4.) Click on the equals button
 // EXPECTATION: Show 3 in the display
 // ACTUAL: ???
