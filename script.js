@@ -9,7 +9,9 @@ keys.addEventListener('click', event => {
     const keyValue = key.textContent;
     const displayValue = display.textContent;
     
-    if (displayValue === 0) {
+    // console.log(typeof displayValue)
+
+    if (displayValue === '0') {
     display.textContent = keyValue;
     } else {
         display.textContent = displayValue + keyValue;
