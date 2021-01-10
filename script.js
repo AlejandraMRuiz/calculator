@@ -1,13 +1,54 @@
 
 const keys = document.querySelector('.calculator-keys');
-// const calculatorDisplay = document.getElementById('calculator-display');
+let calculatorDisplay = document.getElementById('calculator-display');
 
 
 keys.addEventListener('click', event => {
-    // console.log('eyyy!');
     console.log(event.target);
-    // if (event.target.closest('button')) return
+    calculatorDisplay.textContent = calculatorDisplay.value;
 });
+
+
+// Ahmed's guidance:
+
+// get the display input from html and set to a variable
+// set the button value/text content equal to the display variable
+
+
+
+
+
+// A's pseudo code for calculator app: 
+// Start with the ADD and go on to subtract and so on.
+
+// *ADD*
+
+// TEST CASE
+// Description: Adding 1 + 2 = 3
+// 1.) Click on the number one button
+// EXPECTATION: Show 1 in the display
+// ACTUAL: ???
+// 2.) Click on the plus button
+// EXPECTATION: Nothing. (Still showing 1 in the display)
+// ACTUAL: ???
+// 3.) Click on the number two button
+// EXPECTATION: Show 2 in the display
+// ACTUAL: ???
+// 4.) Click on the equals button
+// EXPECTATION: Show 3 in the display
+// ACTUAL: ???
+
+
+// TEST CASE
+// Description: Adding 11 + 22 = 33
+// TEST CASE
+// Description: Adding 1 + 2 + 3 = 6
+// TEST CASE
+// Description: Adding 11 + 22 + 33 = 66
+// TEST CASE
+// Description: Adding 1 + 2 + 3 + 4 = 10
+// TEST CASE
+// Description: Adding 11 + 22 + 33 + 44 = 110
 
 
 
@@ -40,7 +81,6 @@ keys.addEventListener('click', event => {
 
 // STEP 1: Add two numbers
 // in progress...
-
 
 // (a) get 6 to display on 'click' event.
 // loading...
