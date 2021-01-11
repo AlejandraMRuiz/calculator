@@ -1,46 +1,59 @@
 
+const calculator = document.querySelector('calculator');
 const keys = document.querySelector('.calculator-keys');
 const display = document.querySelector('.calculator-display');
+
 
 
 keys.addEventListener('click', event => {
     const key = event.target;
     const keyValue = key.textContent;
     const displayValue = display.textContent;
+    const { type } = key.dataset;
+
+    if (type === 'number')   {
+        if (displayValue === '0') {
+            display.textContent = keyValue;
+            } else {
+                display.textContent = displayValue + keyValue;
+        }
+    }
     
-    // console.log(typeof displayValue)
-
-    if (displayValue === '0') {
-    display.textContent = keyValue;
-    } else {
-        display.textContent = displayValue + keyValue;
-    }
-
-    debugger
-    if (type === 'operator')    {
-        const operatorKeys = keys.querySelectorAll("[data-type='operator']")
-        operatorKeys.forEach(el => { el.dataset.state = '' })
-        // consider renaming 'el'
-
-        calculator.dataset.firstNumber = displayValue;
-        calculator.dataset.operator = keyValue.dataset.key;
-        key.dataset.state = 'selected'
-
+    // is this an operator key?
+    if (type === 'operator') {
+        console.log(key);
+        if (displayValue == '+' || displayValue == '-' || displayValue == '&times;' || displayValue == '/') {
+            display.textContent = keyValue;
+            } else {
+                display.textContent = displayValue + keyValue;
+        }
     }
 
 
-    if (type === 'equal')   {
-        // perform a calculation
-        const firstNumber = calculator.dataset.firstNumber;
-        const operator = calculator.dataset.operator;
-        const secondNumber = displayValue;
-        console.log(firstNumber, operator, secondNumber);
 
-        // firstNumber + secondNumber
-        // firstNumber - secondNumber
-        // firstNumber * secondNumber
-        // firstNumber / secondNumber
-    }
+    // if (type === 'operator')    {
+    //     const operatorKeys = keys.querySelectorAll("[data-type='operator']")
+    //     operatorKeys.forEach(el => { el.dataset.state = '' })
+    //     // consider renaming 'el'
+    //     calculator.dataset.firstNumber = displayValue;
+    //     calculator.dataset.operator = keyValue.dataset.key;
+    //     key.dataset.state = 'selected'
+
+    // }
+
+
+    // if (type === 'equal')   {
+    //     // perform a calculation
+    //     const firstNumber = calculator.dataset.firstNumber;
+    //     const operator = calculator.dataset.operator;
+    //     const secondNumber = displayValue;
+    //     console.log(firstNumber, operator, secondNumber);
+
+    //     // firstNumber + secondNumber
+    //     // firstNumber - secondNumber
+    //     // firstNumber * secondNumber
+    //     // firstNumber / secondNumber
+    // }
 
 });
 
@@ -65,12 +78,19 @@ keys.addEventListener('click', event => {
 // ACTUAL: Works.
 
 // 3.) Click on the number two button
-// EXPECTATION: Show 2 in the display
+// EXPECTATION: Show 2 in the display. (Should now display "1+2")
 // ACTUAL: Works.
 
+
+
+// i n  p r o g r e s s ...
 // 4.) Click on the equals button
-// EXPECTATION: Show 3 in the display
+// EXPECTATION:
+// (a) Show "1+2=" in a smaller font in upper-right corner and;
+// (b) Show 3 in the display.
 // ACTUAL: ???
+
+
 
 
 // TEST CASE
