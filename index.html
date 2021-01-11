@@ -13,10 +13,10 @@
                 <div class='calculator-display'>0</div> <!-- close calculator display -->
                 <div class='calculator-keys'>
                     <!-- operators -->
-                    <button class='add' data-type='operator'>+</button>
-                    <button class='subtract' data-type='operator'>-</button>
-                    <button class='multiply' data-type='operator'>&times;</button>
-                    <button class='divide' data-type='operator'>/</button>
+                    <button data-key='add' data-type='operator'>+</button>
+                    <button data-key='subtract' data-type='operator'>-</button>
+                    <button data-key='multiply' data-type='operator'>&times;</button>
+                    <button data-key='divide' data-type='operator'>/</button>
                     <!-- numbers -->
                     <button class='one' data-type='number'>1</button>
                     <button class='two' data-type='number'>2</button>
@@ -28,10 +28,11 @@
                     <button class='eight' data-type='number'>8</button>
                     <button class='nine' data-type='number'>9</button> 
                     <button class='zero' data-type='number'>0</button>
+                    <!-- other -->
                     <button class='decimal' data-type='number'>.</button>
-                    <button class='clear' data-type='equal'>C</button>
+                    <button class='clear' data-type='clear'>C</button>
                     <!-- rename above 'number decimal' later, as needed -->
-                    <button class='equal'> = </button>
+                    <button class='equal' data-type='equal'> = </button>
                 </div> <!-- close calculator-keys -->
             </div> <!-- close calculator -->
         </div> <!-- close container -->

@@ -3,7 +3,6 @@ const keys = document.querySelector('.calculator-keys');
 const display = document.querySelector('.calculator-display');
 
 
-
 keys.addEventListener('click', event => {
     const key = event.target;
     const keyValue = key.textContent;
@@ -17,17 +16,14 @@ keys.addEventListener('click', event => {
         display.textContent = displayValue + keyValue;
     }
 
+
     if (type === 'operator')    {
         const operatorKeys = keys.querySelectorAll("[data-type='operator']")
         operatorKeys.forEach(el => { el.dataset.state = '' })
-        // consider renaming 'el' to 'symbol' or similar. 
+        // consider renaming 'el'
 
-        // ALTERNATIVE:
-        // const currentActiveOperator = calculator.querySelector('[data-state='selected']')
-        // if (currentActiveOperator)  {
-        //     currentActiveOperator.dataset.state = ''
-        // }
-
+        calculator.dataset.firstNumber = displayValue;
+        calculator.dataset.operator = keyValue.dataset.key;
         key.dataset.state = 'selected'
 
     }
@@ -35,10 +31,15 @@ keys.addEventListener('click', event => {
 
     if (type === 'equal')   {
         // perform a calculation
-        firstNumber + secondNumber
+        const firstNumber = calculator.dataset.firstNumber;
+        const operator = calculator.dataset.operator;
+        const secondNumber = displayValue;
+        console.log(firstNumber, operator, secondNumber);
 
-
-        display.textContent = parseInt(displayValue)
+        // firstNumber + secondNumber
+        // firstNumber - secondNumber
+        // firstNumber * secondNumber
+        // firstNumber / secondNumber
     }
 
 });
