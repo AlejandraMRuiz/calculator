@@ -16,7 +16,7 @@ keys.addEventListener('click', event => {
         display.textContent = displayValue + keyValue;
     }
 
-
+    debugger
     if (type === 'operator')    {
         const operatorKeys = keys.querySelectorAll("[data-type='operator']")
         operatorKeys.forEach(el => { el.dataset.state = '' })
