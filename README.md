@@ -4,7 +4,7 @@ Basic calculator in pure JavaScript, HTML & CSS.
 
 Try it [here!](https://alejandramruiz.github.io/calculator/)
 
-<image src ='AV/calc.png'>
+<image src ='AV/calculator.png'>
 
 ## Summary
 Being a calculator is a great responsibility... Everyone is counting on it ;)

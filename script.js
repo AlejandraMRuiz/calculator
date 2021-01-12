@@ -64,3 +64,9 @@ keys.addEventListener('click', event => {
 // 0. Why doesn't above JS zombie code work?
 // 1. How can you refactor displays section of CSS?
 // 2. Get "&times;" working with the eval function somehow...
+// 3. Add commas after zeros.
+// 4. Include spaces before & after operators. 
+// 5. Ensure the correct screenshot displays.
+
+
+
