@@ -1,11 +1,12 @@
 
+/* general */
+
 html    {
     font-size: 150%;
     font-weight: 300;
     font-family: 'Roboto', Helvetica, Arial, sans-serif;
     line-height: 2.4;
 }
-
 
 body    {
     display: flex;
@@ -15,13 +16,13 @@ body    {
     height: 100vh;
 }
 
-
 .calculator {
     border-radius: 0.5em;
     overflow: hidden;
 }
 
 
+/* display */
 .calculator-display {
     background-color: #4F4F56;
     color: rgb(22, 201, 67);
@@ -32,6 +33,7 @@ body    {
 }
 
 
+/* keys (general) */
 .calculator-keys    {
     display: grid;
     height: 300px;
@@ -44,66 +46,76 @@ body    {
     'zero decimal clear equal';
 }
 
-
 .calculator-keys button {
     font-size: 25px;
 }
+/* covered at 49:00 in vid */
+/* only include this code if you end up having to override inputs as you go */
+/* so like, if you don't persist the display of the operator with the full operation */
+/* below code makes the operator you selected turn a different color so user can SEE */
+/* the button he clicked, which is not so evident when you don't persist display of operator */
+/* IF YOU DO ADD IT, please also add the JS part, which is covered soon after 49:00 */
+/* [data-state='selected'] {
+    background: green;
+} */
 
 
+/* keys (operators) */
+[data-type='operator']   {
+    background: #9C9699;
+}
+ 
+[data-type='operator']:hover,
+[data-type='operator']:focus    {
+    background: #722EAB;
+    color: white;
+}
+
+
+/* keys (numbers) */
 .one    {
     grid-area: one;
 }
-
 
 .two    {
     grid-area: two;
 }
 
-
 .three    {
     grid-area: three;
 }
-
 
 .four    {
     grid-area: four;
 }
 
-
 .five    {
     grid-area: five;
 }
-
 
 .six    {
     grid-area: six;
 }
 
-
 .seven    {
     grid-area: seven;
 }
-
 
 .eight    {
     grid-area: eight;
 }
 
-
 .nine    {
     grid-area: nine;
 }
-
 
 .zero   {
     grid-area: zero;
 }
 
-
 [data-type='number'] {
     background: lightgrey;    
 }
-
 
 [data-type='number']:hover,
 [data-type='number']:focus {
@@ -111,18 +123,15 @@ body    {
     color: white;
 }
 
-
 .decimal    {
     grid-area: decimal;
 }
-
 
 .clear    {
     grid-area: clear;
     background-color: white;
     color: black;
 }
-
 
 .clear:hover,
 .clear:focus    {
@@ -131,30 +140,14 @@ body    {
 }
 
 
+/* keys (other) */
 .equal    {
     grid-area: equal;
     background: #5F5F66;
 }
 
-
 .equal:hover,
 .equal:focus    {
     background-color: #FF6400;
     color: white;
-}
-
-
-[data-type='operator']   {
-    background: #9C9699;
-}
-
-
-[data-type='operator']:hover,
-[data-type='operator']:focus    {
-    background: #722EAB;
-    color: white;
-}
-
-[data-state='selected'] {
-    background: green;
 }

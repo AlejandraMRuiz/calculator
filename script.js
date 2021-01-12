@@ -20,6 +20,7 @@ keys.addEventListener('click', event => {
     }
     
     // is this an operator key?
+    // refactor it
     if (type === 'operator') {
         console.log(key);
         if (displayValue == '+' || displayValue == '-' || displayValue == '&times;' || displayValue == '/') {
@@ -29,31 +30,31 @@ keys.addEventListener('click', event => {
         }
     }
 
-
-
-    // if (type === 'operator')    {
-    //     const operatorKeys = keys.querySelectorAll("[data-type='operator']")
-    //     operatorKeys.forEach(el => { el.dataset.state = '' })
-    //     // consider renaming 'el'
-    //     calculator.dataset.firstNumber = displayValue;
-    //     calculator.dataset.operator = keyValue.dataset.key;
-    //     key.dataset.state = 'selected'
-
+    // why doesn't this work as a refactor of the above?
+    // is this an operator key?
+    // if (type === 'operator') {
+    //     console.log(key);
+    //     display.textContent = keyValue;
+    //     } else {
+    //         display.textContent = displayValue + keyValue;
     // }
+    
 
 
-    // if (type === 'equal')   {
-    //     // perform a calculation
-    //     const firstNumber = calculator.dataset.firstNumber;
-    //     const operator = calculator.dataset.operator;
-    //     const secondNumber = displayValue;
-    //     console.log(firstNumber, operator, secondNumber);
 
-    //     // firstNumber + secondNumber
-    //     // firstNumber - secondNumber
-    //     // firstNumber * secondNumber
-    //     // firstNumber / secondNumber
-    // }
+
+    if (type === 'equal')   {
+        // perform a calculation
+        const firstNumber = calculator.dataset.firstNumber;
+        const operator = calculator.dataset.operator;
+        const secondNumber = displayValue;
+        console.log(firstNumber, operator, secondNumber);
+
+        // firstNumber + secondNumber
+        // firstNumber - secondNumber
+        // firstNumber * secondNumber
+        // firstNumber / secondNumber
+    }
 
 });
 
