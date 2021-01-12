@@ -1,8 +1,8 @@
 
-const calculator = document.querySelector('calculator');
+const calculator = document.querySelector('.calculator');
 const keys = document.querySelector('.calculator-keys');
 const display = document.querySelector('.calculator-display');
-
+const expressionDisplay = document.querySelector('.expression-display');
 
 
 keys.addEventListener('click', event => {
@@ -38,27 +38,36 @@ keys.addEventListener('click', event => {
     //     } else {
     //         display.textContent = displayValue + keyValue;
     // }
-    
 
-
-
+    // change to displayValue
 
     if (type === 'equal')   {
-        // perform a calculation
-        const firstNumber = calculator.dataset.firstNumber;
-        const operator = calculator.dataset.operator;
-        const secondNumber = displayValue;
-        console.log(firstNumber, operator, secondNumber);
+        const expression = display.textContent;
+        display.textContent = eval(expression);
+        expressionDisplay.textContent = expression + '=';
+        console.log(eval(expression));
+    }
+
+    if (type === 'clear')   {
+        display.textContent = '0';
+    }
+
+
+
+});
+
+
+
+// perform a calculation
+        // const firstNumber = calculator.dataset.firstNumber;
+        // const operator = calculator.dataset.operator;
+        // const secondNumber = displayValue;
+        // console.log(firstNumber, operator, secondNumber);
 
         // firstNumber + secondNumber
         // firstNumber - secondNumber
         // firstNumber * secondNumber
         // firstNumber / secondNumber
-    }
-
-});
-
-
 
 
 
